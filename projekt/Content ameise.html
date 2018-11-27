@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ameisen start</title>
+<link rel=stylesheet href="startstyle.css">
+<script type="text/javascript">
+
+function fenster()
+{
+var win;
+win=window.open("","F1","width=960,height=685,resizable=yes");
+win.document.open("text/html");
+win.document.write("<head><title>WOW</title></head><body></body>");
+win.document.write("<center><img src='ant-48022_960_720.png'/></center>");
+win.document.bgColor='white';
+win.setTimeout('window.close()',300);
+}
+function farbton()
+{
+for(var i=0;i<document.getElementsByTagName("td").length;i++)
+
+document.getElementsByTagName("td")[i].style.color="green";
+}
+function tabellefutti()
+{
+document.getElementsByTagName("table")[0].style.display="none";
+}
+function tabelleda()
+{
+document.getElementsByTagName("table")[0].style.display="block";
+}
+function kontrolle()
+{
+document.getElementsByTagName("h3")[1].firstChild.data="OKAY";
+}
+function bildändern()
+{
+var alte=document.getElementById("bleibtbild").getAttributeNode("src")
+alte.nodeValue = "logo-ant.jpg";
+}
+//ajax ist für nicht komplette seite laden nur ein teil
+//Prozess.0: hat nicht gestartet
+//Prozess.1: verbunden mit srever
+//Prozess.2: server hat anfrage erhalten
+//Prozess.3: Server Prozess
+//Prozess.4: Anfrage ist fertig und daten bereit
+function getHttpRequest()
+{
+var httpReq=null;
+if(window.XMLHttpRequest)//modern Browser
+{
+httpReq=new XMLHttpRequest();
+}
+else if(typeof ActiveXObject != "undefined")//für Microsoft internet Explorer 5
+{
+httpReq=new ActiveXObject("Microsoft.XMLHTTP");
+}
+return httpReq;
+}
+function holehallo()
+{
+req=getHttpRequest();
+req.onreadystatechange = zeigeHallo;//callback-funktion
+req.open("get","HALLO.txt",true);//ohne webbrowser geladen
+
+req.send();
+alert("gesendet");
+
+//GET UND POST(parameter beliebige Menge+grösse als argument gesendet)
+//(parameter anders übergeben)
+//(wird mit get-request übergeben)
+
+//POST daten verarbeitet werden sollen
+//GET nicht für nebeneffekt nutzen
+}
+function zeigeHallo()//rückruffunktion
+{
+//antwort vom server holen
+var ausgabe=req.responseText;
+var readyStateText;//status text
+if(req.readyState == 0)
+{
+readyStateText=="nicht gestartet";
+}
+if(req.readyState == 1)
+{
+readyStateText="verbinden...";
+}
+if(req.readyState == 2)
+{
+readyStateText="anfrage erhalten";
+}
+if(req.readyState == 3)
+{
+readyStateText="complete(Daten bereit)";
+alert("Erhalten: "+ausgabe);
+}
+if(req.readyState == 4)
+{
+readyStateText="Daten abgeschlossen";
+}
+//status mit nummer+text
+alert("Status: "+req.readyState+" "+readyStateText);
+//neuen Text in dokument schreiben
+document.getElementById("verfärbung").childNodes[0].data=ausgabe;
+}
+</script>
+<header>
+<nav>
+<ul id="controll">
+<li><a href="start ameise.html">&#9776;</a>
+	<ul>
+	<li><a href="start ameise.html">Home</a>
+<!--		<ul id="zusatz">
+		<li><a href="#Test">Test</a></li>
+		<li><a href="#Sett">Sett</a></li>
+		</ul>
+		-->
+	</li>
+	<li><a href="Content ameise.html">Content</a>
+<!--		<ul id="zusatz">
+		<li><a href="#der">der</li>
+		<li><a href="#die">die</li>
+		</ul>
+		-->
+	</li>
+	<li><a href="Contact ameise.html">Contact</a>
+<!--		<ul id="zusatz">
+		<li><a href="#hi">hi</li>
+		<li><a href="#ti">ti</li>
+		</ul>
+		-->
+	</li>
+	<li><a href="#">About</a>
+			<ul id="zusatz">
+		<li><a href="transi+ani ameise.html" target="_blank">Me</a></li>
+		<li><a href="#others">others</a></li>
+		</ul>
+		
+	</li>
+	</ul>
+</li>
+</ul>
+</nav>
+</header>
+</head>
+<body onload="holehallo()">
+<h1>Geburt der Ameise </h1>
+<div class="Eipflege">Eipflege
+Ameiseneier sind meistens weichschalige, 
+gestreckte Ellipsoide von bis zu einem Millimeter 
+Länge. Nach der Eiablage tragen die Brutpflegerinnen 
+die Eier mittels ihrer Mandibeln in die Brutkammern,
+ in denen geeignete Temperatur und Luftfeuchtigkeit 
+herrschen. Ändert sich dieses Mikroklima durch äußere 
+Einflüsse (zum Beispiel Zerstörung), so werden die Eier 
+sofort von den Arbeiterinnen in andere Brutkammern transportiert.
+</div>
+<hr>
+<div class="textbleibt">
+Ein handbetriebenes Flurförderfahrzeug mit einer Gabel sie 
+ wird zum Transport von leichteren Paletten benutzt.
+	<center><audio controls src="Reman_-_longtime.mp3"/></audio></center>
+ </div>
+ 
+ <h2>Eischlüpfung: </h2>
+ <div id="Eischlüpfung" >
+ <img src="Mrubra_ei.jpg" id="bleibtbild">
+ Kokon
+Nach einiger Zeit schlüpfen die weißen oder gelblichen,
+ madenförmigen Larven aus den Eiern.</br> Sie sind mit Ausnahme
+ der Kopfkapsel weichhäutig, meist leicht behaart und je nach
+ Art mehr oder weniger beweglich.</br> Sie sind beinlos, auch Augen 
+werden nicht ausgebildet.</br> Brutpflegerinnen transportieren die 
+Larven mancher Arten in die Sonne, füttern sie über ihren Kropf
+ und reinigen sie, damit sie nicht austrocknen oder Pilze ansetzen.</br>
+ Die Brutpflegerinnen füttern die Larven per „Kropf-zu-Mund“ 
+Fütterung, Trophallaxis genannt.
+</div>
+<h3>Arten: </h3>
+<div>
+Derzeit sind mehr als 13.000 Arten beschrieben, davon etwa 200 in Europa.
+</div>
+<h3>Tabelle: </h3>
+<table>
+<caption>Arten</caption>
+<colgroup class="markierung">
+<col/>
+</colgroup>
+<colgroup class="test">
+<col/>
+<col class="weshalb"/>
+</colgroup>
+<thead>
+<tr><th colspan="3"><center>Formicidae</center></th></tr>
+</thead>
+<thead>
+<tr><td colspan="2"><center>Martialinee</center></td><td>Leptanillinae</td></tr>
+</thead>
+<thead>
+<tr><th>Poneroide</th><th>Formicoide</th><th>Dorylomorpha</th></tr>
+</thead>
+<tbody>
+<tr><td> Agroecomyrmecinae</td><td>  Dolichoderinae</td><td>  Ecitoninae</td></tr>
+<tr><td>Amblyoponinae</td><td>Aneuretinae</td><td> Aenictinae</td></tr>
+<tr class=hey><td>Paraponerinae</td><td> Pseudomyrmecinae</td><td> Dorylinae</td></tr>
+
+<tr><td>Ponerinae</td><td>Myrmeciinae</td><td> Aenictogitoninae</td></tr>
+<tr><td>Proceratiinae</td><td> Ectatomminae</td><td>Cerapachylinae</td></tr>
+<tr><td>Brownimeciinae</td><td> Heteroponerinae</td><td> Leptanilloidinae</td></tr>
+
+</tbody>
+<tfoot>
+<tr><td>6</td><td>6</td><td>6</td></tr>
+</tfoot>
+</table>
+<a href="#" onclick="farbton()">Grüne schrift</a>
+<a href="#" onclick="tabellefutti()">Tabelle weg</a>
+<a href="#" onclick="tabelleda()">erscheine</a>
+<a href="#" onclick="kontrolle()">überschrift</a>
+<a href="#" onclick="bildändern()">CHANGE</a>
+<h3>Fakten zur Tierweld:</h3>
+<div id="bildmasse" >
+Alle Arten sind staatenbildende, eusoziale Tiere (staatenbildende 
+Insekten), die in zum Teil riesigen Verbänden mit bis
+ über 20 Millionen Individuen leben. Zusammen mit den 
+Termiten stellen sie weltweit über 25% der tierischen 
+Biomasse (wenn man den Menschen wegläßt), innerhalb der 
+Insekten bilden die Ameisen sogar fast 40% der Biomasse! 
+</div>
+<hr>
+<div>
+Blattschneiderameisen mit einem Blattstück:
+</div>
+<abbr title="KLEINBILD"><img src="blätter.jpg" id="blatt"></abbr><!--Global Attributes-->
+<hr>
+<div>
+Die Biomasse aller Ameisen auf der Erde umfasst 
+mehr als die Hälfte der Gesamtbiomasse aller anderen 
+Insekten zusammen und übersteigt jene der Menschen   
+bei weitem, obwohl eine einzelne Ameise je nach Art 
+und Kaste nur etwa 6 bis 10 mg wiegt und 0,8 mm 
+(eine Art der Gattung Leptothorax) bis 25 mm (Bulldoggenameisen)
+ lang wird.
+</div>
+<hr>
+<a id="verfärbung" href="#" onmouseover="fenster()">
+Ameisen mit Backpulver bekämpfen, bis sie platzen.
+</a>
+<hr>
+<div>
+Ameisen als Haustiere werden in der Schweiz immer beliebter.
+<br/>
+</br>
+ Mit 650 Franken die teuerste im Angebot ist die gefährliche
+ 24-Stunden-Ameise.
+</br>
+</br>
+ Warum kaufen Leute Ameisenfarmen?
+</br>
+</br>
+1. Beobachte Ameisen, um zu sehen, wie sie sich verhalten.</br>
+2. Ameisen sind große Starter Haustiere.</br>
+3. Pflege einer Ameisenfarm ist ein Spaß Hobby.</br>
+4. Ameisenfarmen sind unterhaltsam.</br>
+5. Inspirieren Sie eine lebenslange Liebe zu den Naturwissenschaften.</br>
+6. Ameisenhöfe lehren Kinder Verantwortung.</br>
+7. Ameisenfarmen sind preiswert.</br>
+8. Minimale Pflege ist erforderlich.</br>
+9. Erfahren Sie mehr über verschiedene Arten von Ameisen.</br>
+10. Ameisenfarmen nehmen sehr wenig Platz ein.</br>
+</div>
+<address><a href="Ameise.html"target="_blank">&lt;Markus&gt;</a></address>
+<center><footer>&copy; Copyright 2017</footer></center>
+
+</body>
+</html>

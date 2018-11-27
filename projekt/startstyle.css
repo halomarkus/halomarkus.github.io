@@ -1,0 +1,484 @@
+/*Tex inhalt */
+body{
+	background-color:rgb(255, 255, 165);
+	font-size: 20px  ;
+	font-family:"Lucida Sans";
+	color:#000000;
+	margin:10px 0px 0px 10px;
+	border-style:inset;
+	border-color:rgb(214, 214, 36);
+	border-width:30px;
+	padding:10px 10px 10px 10px;
+	text-decoration:none;
+	box-shadow: 10px 10px 100px rgb(66, 134, 244) inset;
+	/* display:-webkit-flex; */
+		/* display: flex;/*richtet die flexiblen boxen*/ 
+	    /* -webkit-flex-flow: row wrap;/*und zwar horizontal*/ 
+		/* flex-flow: row wrap;/*Kurzschrift für flex-direction und flex-wrap*/ 
+	/* /*um berechnungen zu sparen*/ 
+}
+/* überschriften */
+h1,h2,h3{
+	margin-top:100px;
+	color:black;
+	text-decoration:underline;
+}
+/*allgemeiner text */
+div{
+	margin:10px 10px 10px 10px;
+	padding-right:50px;
+	color:black;
+}
+/* umrandeter Text */
+#Eigenschaften{
+	font-size:30px;
+	text-decoration:none; 
+	border-style:groove;
+	border-width:30px;
+	border-radius: 50px;
+}
+
+/*------Menu------*/
+/* obere + untere ebene nicht formatiert */
+#controll, #controll ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+/* für die richtige anordnung des menüs(erster link) */
+#controll li {
+ float: left;
+  position: relative;
+  width: 400px;
+  border: 10px double rgb(149, 237, 155);
+  background-color: #E7EDF5;
+  color: #2D486C;
+  font-size: 80%;
+  margin-right: 10px;
+}
+/*nicht als einziger text sondern nur als blog*/
+#controll a:link, #controll a:visited {
+  display: block;
+  text-decoration: none;
+  padding-left: 10px;
+  color: #2D486C;
+}
+/* So das sich nicht alles immer bewegt */
+* html #controll a {
+  width: 100%;
+}
+/* Das die ul's +li's verschwinden und dabei gleich bleiben */
+#controll li ul {
+  display: none;
+  position: absolute;
+}
+/*das ganze genau untereinander steht und eigen formatiert wird (Rand)*/
+#controll li ul li {
+
+  border: 100px transparent;
+  border-bottom: 5px dashed rgb(252, 180, 0);
+  border-top: 5px dashed rgb(72, 205, 249);
+  background-color: #F1F5F9;
+  font-size: 90%;
+}
+/* das wenn man drüber fährt es sich ändern soll.*/
+#controll li:hover ul {
+  display: block;
+}
+/*zu den einzelnen links soll eine farbe kommen*/
+/*li a:hover macht einzelnt */
+#controll ul li:hover {
+	background-color:rgb(255, 83, 53);
+}
+
+/*für die unteren zeilen das es weggeblendet wird 
+#controll ul ul{
+	display:none;
+}
+ /*hier wird das untere erscheinen wenn zum oberen geht */
+/*#controll ul li a:hover > ul{
+	display:block;
+}*/
+/* links abstand haben soll die untersten links */
+#controll ul ul {
+	margin-left:250px;
+	top:0px;
+	position:absolute;
+}
+
+/*------BILD-----*/
+/* Hier wird einfach nur ein kleines bild gzeigt */
+#bildamtext {
+	 float:right;
+	 top:10%;
+	 left:5%;
+	 
+   /*bringt nicht viel top: 30px;
+    left: 10px;*/
+    height: 200px;
+    width: 300px;
+	background-color:green;
+	border-radius: 30px;
+}
+/* und hier wird es grösser */
+img#bildamtext:hover{
+	width:100%;
+	height:100%;
+}
+/*mit javascript das [+]*/
+.weg
+{
+	display:none;
+	color:red;
+}
+
+/*--SEITE 2--*/
+
+/*witziger Text fixiert*/
+div.textbleibt{
+border-style:inset;
+border-color:#ff8c00;
+border-width:10px;
+color:green;
+font-size:30px;
+font-family:"OCR A Breit";
+position:absolute;
+margin-top:5px;
+left:100px;
+right:40px;
+height:65px;
+width:800px;
+}
+/*-----Tabelle-----*/
+/* ganz oben in der tabelle */
+thead{
+background-color:rgb(236, 242, 75);
+}
+/* ein bereich der tabelle links-rechts*/
+tbody tr:hover,thead tr:hover{
+background-color:#BBF;
+}
+/*obere + untere teil innen */
+tbody td:hover,th:hover{
+background-color:white;
+color:black;
+}
+/* Beim anklicken von tabellen innen*/
+td:active,th:active {
+background-color:#000;
+color:#DDD;
+}
+/*gebundener Text an Tabelle */
+caption{
+font-size:28px;
+color:#226;
+caption-side:top;
+text-align:left;
+margin-bottom:0.9em;
+margin-top:10px;
+font-family:"Caladea";
+}
+/*links zeile von oben nach unten anders gefärbt*/
+.markierung {
+background-color:#AFA;
+}
+/*Feld rechts von oben nach unten rechte seite*/
+col.weshalb{
+background-color:#FAA;
+}
+/* ein bestimmter bereich von links nach rechts */
+tr.hey{
+background-color:#888;
+}
+/* für kompletten bereich unten das da abstand ist.*/
+td{
+padding:9px 8px 2px 9px;
+border: 1px solid #262;
+color:#111;
+border-spacing:11px;
+}
+/* der obere berecih der überschrieben wird */
+th{
+padding:9px 8px 2px 9px;
+border: 1px solid #262;
+border-spacing:1px;
+
+color:yellow;
+background-color:red;
+}
+/* hier wird alles an der tabelle geändert */
+/*table{
+margin-left:30px;
+font-size:1em;
+color:#111;
+text-align:right;
+border: 8px ridge #262;
+border-spacing:0px;
+
+border-collapse:collapse;
+}*/
+
+/*----unten seite 2----*/
+/*der text geht am Bild*/
+#bleibtbild{
+	float:left;
+}
+/*hintergrund*/
+#bildmasse{
+	background-image:url(masse.png);
+}
+/*bild mit ameisen*/
+#blatt{
+	width:200px;
+	height:200px;
+	margin:-1% 40% 0%;
+}
+/*vorletzte spalte standard setzen*/
+#verfärbung:link{
+	text-decoration:none;
+}
+/*verblassen lassen nachdem angeschaut*/
+#verfärbung:visited{
+	color:transparent;
+	font-family:"Lucida Sans";
+	font-size:20px;
+	text-shadow:0 0 2px black;
+}
+/*verblassen lassen nachdem drüber gefahren*/
+#verfärbung:hover{
+	color:transparent;
+	font-family:"Lucida Sans";
+	font-size:20px;
+	text-shadow:0 0 1px black;
+}
+/*verblassen lassen beim angeklicken*/
+#verfärbung:active{
+	color:transparent;
+	font-family:"Lucida Sans";
+	font-size:20px;
+	text-shadow:0 0 4px black;
+}
+/*---Seite 3----*/
+/*Zentrum titel*/
+   h2#cont { 	        
+      font-size:26px;
+      color:#262; 
+      margin-bottom:20px;
+      margin-top:19px;
+      font-variant:small-caps; /*alles wird gross geschrieben*/
+   }
+  
+  
+   /*---Formatierung Bilder oben ---*/
+			
+    
+	   /*obere bild design*/
+	   figure img{
+		   border: 3px solid rgb(66, 128, 244); 
+	    width:220px; 
+	    height:160px; 
+	    margin:0px 10% 0px 10px; 
+		
+	   }
+	   /*oben+rechts*/
+	   .oben,  div.rechtesbild .oben{
+		   vertical-align: top;/*richtet den Inhalt der Box an der Oberkante der Linebox aus*/
+	   }
+	   /*anstatt float left zu benutzen*/
+	   figure, div.rechtesbild figure {
+		   display: inline-block;/*erzeugen eine oder mehrere Inline-Boxen.*/
+	   }
+	   /*Rand bilder und text Nâher aneinander*/
+	    figure, figcaption, div.rechtesbild figure, div.rechtesbild.figcaption  {
+		   margin:0;
+		   padding:0;
+		   
+	   }
+	  
+     
+  
+   /* ---Formulare ---*/
+   /*beinhaltet den mittleren Teil*/
+   form { 
+	   padding: 2px;
+	   margin-left:20%;/*um besser links zu halten*/
+	   max-width:680px; /* verhindert großen Abstand*/ 
+  }
+  /*rand von den Daten*/
+  form fieldset {
+      border: 2px dashed #B55;
+      padding: 10px;
+      padding-top:36px;
+      margin-bottom:20px;
+	  border-radius:30px 30px 30px 30px;
+	  min-width:120px;
+	  
+  }     
+  /*hinter legend verschwommen*/
+  form fieldset legend{
+      /* color: #b55; */
+	  /* background-color :#CFC; */
+	      color: black;
+		  text-shadow: 1px -10px 4px red;
+  } 
+      
+  	/*von inneren tags*/   
+   form div {
+       margin: 0;
+       margin-bottom: 5px;
+       padding: 0px;
+     }
+     
+	/*wurde schon überschrieben input felder
+    input {
+       color: #00008B;
+	    background-color: #ADD8E6;
+	    border: 1px solid #00008B;
+    }
+    */
+	
+	/*wann es sich zusammenklappt*/
+      /*Die einzelnen Labels wie breit minimal gehen sollen*/
+      form div label {
+	  min-width: 30%;/* prozentuale Angabe */
+    }
+ 
+   /* Formatier der mittleren Spalte */	  
+/*eingabe feld*/
+   div.eingabe {
+       padding: 0;
+	   min-width:40px;
+	  background-image: radial-gradient(circle farthest-side at 28% 28%, #faa 15% , #42141400 40%);
+	  float:right;     /* Input-Feld fließt rechts vom Label-Feld*/
+	   margin-right:20px;
+	   padding-left:20px;
+     }
+	 
+	/* Wenn Fenster zu schmal ist Block dargestellt	über den Rand*/
+	
+	 
+	 @media (max-width: 1270px) 
+	   { 
+          div.eingabe {
+	         float:none;
+	         background-color:yellow;
+          }
+		  div label{
+			  text-shadow:1px 1px 1px red, 1px -1px 1px red, -1px 1px 1px red, -1px -1px 1px red,
+			             2px 2px 1px red, 2px -2px 1px red, -2px 2px 1px red, -2px -2px 1px red,
+						 3px 3px 1px red, 3px -3px 1px red, -3px 3px 1px red, -3px -3px 1px red;
+		  }
+ 	   }	
+   /*Nach jedem Label-Inputfeld-Paar wird float abgeschaltet und Eintrag links positioniert */
+   div:after {  
+      content: ""; /*inhalt im div*/
+      display: block; /*nicht verändert*/
+      clear: both; /*stoppt die floats*/
+     }
+	
+/* Aussehen der Input-Felder */	
+    input {
+color:#397a1a;
+background-color:white;
+border:10px solid #efeaff;
+
+    }
+    
+        /* spezielle Input-Felder grösse der eingabe*/
+    input.txt, input.dateiUpld  {
+        width:200px;
+   }
+   
+    /* Liste radioButtons ganzes pack*/
+    form div ul {
+       list-style: none;
+       padding-left:10px;
+       margin-bottom:30px;
+    }
+    /*untere Kommentare */
+    textarea {
+    width: 300px;
+    height: 100px;
+    color: #68585a;
+    background-color: #9bc46a;
+    border: 15px inset #8cffaa;
+   }  
+   
+   /*----Linke Spalte---*/
+    /* für highlights*/
+    nav{   
+float:left;   
+margin-top:0px;  
+min-height:140px; /* um den abstand von oben zu unten zu haben	*/
+    }
+	/*die linke tafel von der wand weg*/
+	nav fieldset{
+		margin-left:10%;
+		margin-right:40px;
+	}
+	/*linke seite des typs*/
+	nav fieldset ol{
+position: relative;
+width: 10em;
+margin-right:11px;
+margin-left:11px;
+border: 0 none transparent;
+border-bottom: 4px inset rgb(4, 137, 66);
+border-top:4px outset rgb(4, 137, 66);
+background-color: #F1F5F9; 
+font-size: 90%;
+margin-bottom: -1px;
+margin-top: 1px;
+padding-left: 0px;
+color:gray;
+background-image: linear-gradient(orange 10%,yellow 30%, red 33.3%, blue 70%, green 80%,purple 100%);
+		 /* red,orange,yellow,green,blue,purple */
+	}
+
+    
+   /*so das mehrere teile der seite responsive sind*/
+   * html nav a {
+     width: 100%;
+   }
+   	/*höhe von nav wenn breite erreicht ist*/
+	@media (max-width: 490px) 
+	   {     nav{   
+	          min-height:200px; /*  für Smartphones*/ 
+          }
+			   
+ 	   }	
+
+ /* ---Bilderleiste rechts ---*/
+       /*  z.T. wird durch Styles bei Titelbildern formatiert */
+    aside {   
+float:right;
+	padding: 0;
+margin : 0px 35% 0px 15px;
+min-height:200px;
+width:200px;
+  
+    }
+
+   /* Filesetbeschreibung für das Formular*/
+   fieldset.rechtesbild {
+      border: 2px dashed #B55;
+      padding: 10px;
+      padding-top:22px;
+      margin-bottom:18px;
+      text-align:center;
+      margin-top:15px;
+  }     
+  /*titel des rechten bildes*/
+   legend.rechtesbild {
+      color:#f6f91d;
+background-color:#f98e1b;
+
+  }
+ 
+
+  /* bilder website rechts die bilder*/
+
+   div.rechtesbild figure img{
+     width:240px;
+     height:120px;
+  }	   
