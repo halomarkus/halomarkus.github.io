@@ -1,7 +1,379 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>Ameisen start</title>
+<link rel=stylesheet href="startstyle.css">
+<script type="text/javascript">
+
+alert("hauptseite");
+//rechnen
+var zahl=45;
+function testzahl()
+{
+var zahl=15;
+var rechner=this.zahl+zahl;
+document.writeln("Rechnung: "+(parseInt(rechner))+10+"<br/>");
+}
+//text ausgabe
+function arrayadd()
+{
+var zusammen="";
+document.writeln("<br/>Laenge: "+arrayadd.arguments.length+"<br>");
+for(var i = 0;i < arrayadd.arguments.length;i++)
+
+zusammen=zusammen+arrayadd.arguments[i];
+return zusammen;
+
+}
+
+var dauer=10000;
+//zeit fenster schliesst
+function umrechnen(dauer)
+{
+sekunden=dauer/1000
+document.writeln("Sekunden="+sekunden);
+}
+
+//öffnen des Fensters
+function testewissen()
+{
+alert("öffnen des fensters");
+var win;
+win=window.open("","F1","width=400,height=400,resizable=yes");
+win.document.open("text/html");
+win.document.write("<head><title>Teste Wissen</title></head><body><H2><Center>Test des Tages</center></h2></body>");
+win.document.write("<img src='215768d35b7d21e.jpg'/><h3><Center>Eigenschaften der Ameise</center></h3><b><label>Weitere Namen:</label><b/><input type='text'/><br/><b><label>Klasse von Tieren:</label><b/><input type='text'/>");
+win.document.bgColor='green';
+win.setTimeout('window.close()',this.dauer);
+}
+//wo rausholen
+function angelegt()
+{
+ameisenliste=new Array();
+ameisenliste[0]=new ameise("Mensch",1.8,20,4,"pink","krokodil");
+ameisenliste[1]=new ameise("Insekt",40,21,2,"rot","baum");
+ameisenliste[3]=new ameise("Insekten",7,12,3,"braun","Spinnen");
+ameisenliste[5]=new ameise("Pflanze",6,6,6,"gelb","Vögel");
+
+}
+//änderung
+function klasse(klasse)
+{
+this.kategorie=klasse;
+return true;
+}
+//druckt
+function drucken()
+{
+for(i=0;i<ameisenliste.length;i++)
+{
+if(ameisenliste[i]!=null)
+{
+document.writeln("<br/>i: "+i+"Klasse: "+ameisenliste[i].kategorie+"<br/>");
+document.writeln("i: "+i+"Größe: "+ameisenliste[i].grösse+"<br/>");
+document.writeln("i: "+i+"Alter: "+ameisenliste[i].alter+"<br/>");
+document.writeln("i: "+i+"Farbe: "+ameisenliste[i].farbe+"<br/>");
+document.writeln("i: "+i+"Feinde: "+ameisenliste[i].feinde+"<br/>");
+}
+else
+{
+document.writeln("<br/>i: "+i+"Nichts<br/>");
+}
+}
+}
+//dazu 2
+function dazu()
+{
+ameisenliste[7]=new larve();
+larve.prototype.erde='wasser';
+for(var alles in ameisenliste[7])
+document.writeln("<br/>i: "+i+alles+": "+ameisenliste[alles]);
+}
+//Objekt 2
+var larve=function(ei)
+{
+this.ei=ei;
+}
+//zusatz für attribute einer ameise
+function extra()
+{
+ameisenliste[6]=new ameise();
+ameisenliste[6]["Name"]="Marc";
+ameisenliste[6]["Geschlecht"]="Männlich";
+ameisenliste[6]["Besonderheit"]="Computer";
+ameisenliste[6]["Betriebsystem"]="Kali Linux";
+for(var alles in ameisenliste[6])
+{
+if(ameisenliste[6][alles]!=undefined)
+document.writeln("NR.6: "+alles+": "+ameisenliste[6][alles]+" ");
+}
+}
+
+//objekt
+function ameise(kategorie,grösse,gewicht,alter,farbe,feinde)
+{
+var kategorie;
+var grösse;
+var gewicht;
+var alter;
+var farbe;
+var feinde;
+this.kategorie=kategorie;
+this.grösse=grösse;
+this.gewicht=gewicht||100;
+this.alter=alter||100;
+this.farbe=farbe;
+this.feinde=feinde;
+this.klasse=klasse;
+}
+//vergleich
+function vergleich()
+{
+for(x=0;x<ameisenliste.length;x++)
+{
+for(y=0;y<ameisenliste.length;y++)
+{
+if(x!=y){
+if(ameisenliste[x]===ameisenliste[y])
+document.writeln("<br/>"+x+"gleich"+y);
+}
+}
+}
+document.writeln("<br/>");
+}
+//namen überpruüfen
+ function formularAusgabe()
+      {         
+         var myName = document.formular.namen.value;
+         
+if (isNaN(myName)){
+            alert("String");
+			alert("Name: " + myName);
+			}
+          else
+            alert("ZAHL");
+      }
+	  
+	  //wieviel reinkommt
+	  function aktuell()
+	  {
+	  document.formular.Kontrolle.value=document.formular.test.value.length+1 ;
+	  if(document.formular.test.value.length>25)
+	  {
+	  document.formular.test.value="Zu lang";
+	  return true;
+	  }
+	  }
+	  //überpruüfe hinter tag
+	  function bewerten(inhalt)
+	  {
+	  
+	  alert("Adresse:"+inhalt);
+	  var offen=inhalt.indexOf('http');
+	  var schliessen=inhalt.indexOf('/');
+	  
+	  var anfString=inhalt.substring(0,offen);
+	  var endeString=inhalt.substring(schliessen+2,inhalt.length);
+								//index vorwärst gesucht wird		gesuchte String 
+	  alert("Ohne[http]: "+anfString+endeString);
+	  }
+	 
+//datum abschreiben
+	 function dat(date)
+	  {	 
+	  var Zahl;
+	  if(date.length>8)
+	  {
+	  alert("Error");
+	  }
+	  else
+	  {
+	  Zahl=date.split(".");
+	  for(i=0;i<Zahl.length;i++)
+	  {
+	 if (isNaN(Zahl[i])){
+            alert("String");
+			}
+          else
+	  alert("<b>ZAHL</b>"+Zahl[i]);
+	  } 
+	  var wandel=Number(Zahl[1]);
+	  switch(wandel)
+{
+case 1: var m="Januar";break;
+case 2: var m="Februar";break;
+case 3: var m = "März"; break;
+case 4: var m = "April"; break;
+case 5: var m = "Mai"; break;
+case 6: var m = "Juni"; break;
+case 7: var m = "Juli"; break;
+case 8: var m = "August"; break;
+case 9: var m = "September"; break;
+case 10: var m = "Oktober"; break;
+case 11: var m = "November"; break;
+case 12: var m = "Dezember"; break;
+default: var m = "Unbekannter Monat";
+}
+document.writeln(Zahl[0]+"."+m+Zahl[2]);
+	  }
+	  }
+	  //zusatz zeigen
+	  function more(dinge)
+	  {
+	  if(document.getElementById(dinge+"HA").style.display!="inline")
+	  {
+	  document.getElementById(dinge+"HA").style.display="inline";
+	  document.getElementById(dinge+"auf/zu").firstChild.data="[-]";
+	  }
+	  else
+	  {
+	  document.getElementById(dinge+"HA").style.display="none";
+	  document.getElementById(dinge+"auf/zu").firstChild.data="[+]";
+	  }
+	  }
+	  function schreiben()
+	  {
+	  //test
+		document.writeln("Dies ist ein "+navigator.appname+"-Browser<br/>");
+		testzahl();
+		var power = arrayadd('h','a','l','l','o');
+		document.write("Ausgabe:"+ power +"</br>");
+	  //zeit wie lang fenster auf bleibt
+	  umrechnen(dauer);
+	  //beginn objekt
+angelegt();
+ameisenliste[0].klasse("Insekt");
+drucken();
+extra();
+dazu();
+vergleich();
+document.writeln(document.location.href);
+}
+</script>
+<header>
+<nav>
+<ul id="controll">
+<li><a href="start ameise.html">&#9776;</a>
+	<ul>
+	<li><a href="start ameise.html">Home</a>
+<!--		<ul id="zusatz">
+		<li><a href="#Test">Test</a></li>
+		<li><a href="#Sett">Sett</a></li>
+		</ul>
+		-->
+	</li>
+	<li><a href="Content ameise.html">Content</a>
+<!--		<ul id="zusatz">
+		<li><a href="#der">der</li>
+		<li><a href="#die">die</li>
+		</ul>
+		-->
+	</li>
+	<li><a href="Contact ameise.html">Contact</a>
+<!--		<ul id="zusatz">
+		<li><a href="#hi">hi</li>
+		<li><a href="#ti">ti</li>
+		</ul>
+		-->
+	</li>
+	<li><a href="#">About</a>
+		<ul id="zusatz">
+		<li><a href="transi+ani ameise.html" target="_blank">Me</a></li>
+		<li><a href="#others">others</a></li>
+		</ul>
+	</li>
+</ul>
+</li>
+</nav>
+
+</header>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with Github Pages.</p>
+<h1>Definition: </h1>
+<div id="stur">Eine Ameise ist ein kleines Insekt, das rotbraun oder schwarz ist,
+</div><a id="sturauf/zu" href="#" onclick='more("stur")'>[+]</a>
+<div id="sturHA" class=weg>
+ in Gemeinschaften aus sehr vielen Tieren lebt und 
+dessen Bau die Form eines Hügels oder Haufens hat.
+</div>
+<hr>
+
+    <form name=formular onSubmit="formularAusgabe(); bewerten(document.formular.inhalt.value); datum(document.formular.date.value);">
+       Name eingeben:<input type=text name=namen />
+	   <textarea name=test cols="30" rows="4" maxlength="50" onkeydown="aktuell()">Hallo</textarea>
+	   <input type="text" value="0" readonly="readonly" size="3" name="Kontrolle">
+	   <input type="reset">
+	   <br/>
+	   <input type=text size=10 name=inhalt />
+	   <input type=button value="URL" onclick="bewerten(document.formular.inhalt.value);" />
+	   <input type=text size=20 name=date />
+	   <input type=button value="DATUM[PUNKT]" onclick="dat(document.formular.date.value);" />
+	   <input type=button value="JAVASCRIPT" onclick="schreiben();" /><br/><br/><br/>
+       <input type=SUBMIT  value="abschicken" size=4/>
+    </form>
+	<!-- Ameise nachbilden: -->
+	<!-- <form name=formular1 onSubmit="abschreiben()"> -->
+	<!-- Klasse<input type=text name=klasse /><br/><br/><br/> -->
+	<!-- Größe<input type=text name=grösse />mm<br/><br/><br/> -->
+	<!-- Gewicht<input type=text name=gewicht />mg<br/><br/><br/> -->
+	<!-- Alter<input type=text name=Alter />Jahre<br/><br/><br/> -->
+	<!-- Aussehen<input type=text name=farbe /><br/><br/><br/> -->
+<!-- <input type=SUBMIT /> -->
+<!-- </form> -->
+<hr>
+
+<!--<div class="textbleibt">
+Ein handbetriebenes Flurförderfahrzeug mit einer Gabel,
+ das man ohne Gabelstaplerführerschein ("Führerschein zur
+ Benutzung von Flurförderfahrzeugen") benutzen darf.
+ Wird zum Transport von leichteren Paletten benutzt.
+ </div>
+ -->
+
+ <h2>Eigenschaften: </h2>
+ <div id="Eigenschaften">
+ <img src="inhalt.png" id="bildamtext">
+ Weitere Namen: Emse <br/>
+Lateinischer Name: Formicidae (Kategorien)<br/>
+Klasse: Insekten <br/>
+Größe: 0,7mm - 7cm <br/>
+Gewicht: 3,5 - 12mg <br/>
+Alter: 3 Monate - 15 Jahre <br/>
+Aussehen: schwarz, rot, braun, gelb <br/>
+Nahrung: je nach Art unterschiedlich <br/>
+Verbreitung: weltweit (außer Antarktis) <br/>
+Ursprung: vor ca. 130 Millionen Jahren <br/>
+Lebensraum: unspezifisch <br/>
+natürliche Feinde: Vögel, Spinnen, Amphibien <br/>
+Geschlechtsreife: im Frühjahr (nur die Königin) <br/>
+Paarungszeit: im Frühjahr <br/>
+Sozialverhalten: staatenbildendes Insekt <br/>
+Vom Aussterben bedroht: Nein <br/>
+<form return onSubmit="testewissen();">
+<input type=SUBMIT onClick="testewissen();" value="Fenster öffnen"/>
+</form>
+</div>
+
+<h3>Kategorie:Formicidae </h3>
+<div id="fest1">
+Dies ist die Kategorie für Ameisen (Formicidae) 
+<a id="festauf/zu" href="#" onclick='more("fest")'>[+]</a>
+</div>
+<div id="festHA" class=weg>
+im Kategoriesystem, das sich an den wissenschaftlichen 
+Namen orientiert. Diese Kategorie entspricht der Kategorie Ameisen 
+die sich an den deutschen Namen orientierenden Kategoriesystem.
+</div>
+
+<address><a href="Ameise.html" target="_blank">&lt;Markus&gt;</a></address>
+<center><footer>&copy; Copyright 2017</footer></center> 
+ <!-- <marquee direction="up"><!-- Basic Box Model Marquee|| Animierte Inhalte Textdarstellung--> 
+ <!-- <!--Laufschrift (Webkit)--> 
+ <!-- <p>Kurze</p> -->
+ <!-- <p>Störung</p> -->
+ <!-- <p>Entschuldigung</p> -->
+ <!-- <p>...</p> -->
+ <!-- </marquee> -->
 </body>
 </html>
